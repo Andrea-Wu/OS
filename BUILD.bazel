@@ -1,5 +1,14 @@
 cc_binary(
     name = "buddy_allocator",
     srcs = ["buddy_allocator.cc"],
-    deps = ["@abseil-cpp//absl/container:btree"],
+    deps = [
+	"@abseil-cpp//absl/container:btree",
+	"@abseil-cpp//absl/status:statusor",
+    ],
+)
+
+cc_binary(
+    name = "hello",
+    srcs = ["hello.cc"],
+    deps = [],
 )
