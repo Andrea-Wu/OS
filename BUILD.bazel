@@ -1,0 +1,18 @@
+cc_binary(
+    name = "buddy_allocator",
+    srcs = ["buddy_allocator.cc"],
+    deps = [
+	"@abseil-cpp//absl/strings",
+ 	"@abseil-cpp//absl/container:btree",
+    ]
+)
+
+cc_binary(
+  name = "hello_world",
+  deps = [
+    "@abseil-cpp//absl/strings",
+    "@abseil-cpp//absl/container:btree",
+  ],
+  srcs = ["hello_world.cc"],
+)
+
